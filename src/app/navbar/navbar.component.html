@@ -1,0 +1,12 @@
+<div>
+  <h1>Where in the world?</h1>
+  <p (click)="toggleMode()">
+    <ng-container *ngIf="isDarkMode; else elseTemplate">
+      <span class="material-symbols-outlined"> dark_mode </span>Light
+    </ng-container>
+    <ng-template #elseTemplate>
+      <span class="material-symbols-outlined"> dark_mode </span>Dark
+    </ng-template>
+    Mode
+  </p>
+</div>

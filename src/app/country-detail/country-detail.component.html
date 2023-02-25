@@ -1,0 +1,38 @@
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+/>
+
+<button class="backBtn" routerLink="">
+  <span class="material-symbols-outlined"> arrow_back </span> Back
+</button>
+<div class="detail">
+  <img class="flag-detail" src="{{ country.flags.png }}" />
+  <div class="detail-country" *ngIf="country">
+    <h1>{{ country.name.common }}</h1>
+    <div class="gridy">
+      <p><b>Native Name:</b> {{ nativeName.official }}</p>
+      <p><b>Top Level Domain:</b> {{ country.tld[0] }}</p>
+
+      <p><b>Region:</b> {{ country.region }}</p>
+      <p><b>Currencies:</b> {{ currencies.name }}</p>
+
+      <p>
+        <b>Languages:</b>
+        <span *ngFor="let language of languages"> {{ language }}, </span>
+      </p>
+      <p><b>Sub Region:</b> {{ country.subregion }}</p>
+
+      <p><b>Population:</b> {{ country.population | number }}</p>
+      <p><b>Capital:</b> {{ country.capital }}</p>
+    </div>
+    <p class="borders">
+      <b>Borders:</b
+      ><span *ngFor="let border of borders"
+        ><button (click)="goToPage(border.name.common)">
+          {{ border.name.common }}
+        </button></span
+      >
+    </p>
+  </div>
+</div>

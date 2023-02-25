@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="search">
+    <img src="assets/search_icon.svg" alt="" />
+    <input
+      type="text"
+      placeholder="Search for a country..."
+      (input)="searchBox($event)"
+    />
+  </div>
+  <select name="" id="" (input)="selectRegion($event)">
+    <option value="" disabled selected hidden>Filter By Region</option>
+    <option value="">All</option>
+    <option value="Africa">Africa</option>
+    <option value="America">America</option>
+    <option value="Asia">Asia</option>
+    <option value="Europe">Europe</option>
+    <option value="Oceania">Oceania</option>
+  </select>
+</div>
