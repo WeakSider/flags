@@ -1,7 +1,7 @@
 <div class="countries">
   <div *ngFor="let country of shownCountries">
-    <div class="country" routerLink="/{{ country.name.common }}">
-      <img src="{{ country.flags.png }}" width="300px" height="200px" />
+    <div class="country" routerLink="/country/{{ country.name.common }}">
+      <img src="{{ country.flags.png }}" width="250px" height="160px" />
       <div class="texts">
         <h1>{{ country.name.common }}</h1>
         <p><b>Population:</b> {{ country.population | number }}</p>

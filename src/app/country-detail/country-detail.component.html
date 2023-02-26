@@ -6,9 +6,9 @@
 <button class="backBtn" routerLink="">
   <span class="material-symbols-outlined"> arrow_back </span> Back
 </button>
-<div class="detail">
+<div class="detail" *ngIf="country">
   <img class="flag-detail" src="{{ country.flags.png }}" />
-  <div class="detail-country" *ngIf="country">
+  <div class="detail-country">
     <h1>{{ country.name.common }}</h1>
     <div class="gridy">
       <p><b>Native Name:</b> {{ nativeName.official }}</p>
