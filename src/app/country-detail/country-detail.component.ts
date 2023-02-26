@@ -43,7 +43,7 @@ export class CountryDetailComponent implements OnInit{
     
   }
   goToPage(item:string){
-    this.router.navigate(['/', item])
+    this.router.navigate(['/country/', item])
         .then(() => {
           window.location.reload();
         });
